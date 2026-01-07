@@ -1,37 +1,35 @@
 <template>
   <div class="tutorials-page">
-    <div class="container">
-      <h2>آموزش‌های تخصصی</h2>
-      
-      <div class="filter-tabs">
-        <button 
-          v-for="category in categories"
-          :key="category"
-          @click="selectedCategory = category"
-          :class="{ active: selectedCategory === category }"
-          class="tab"
-        >
-          {{ category }}
-        </button>
-      </div>
+    <h2>آموزش‌ها</h2>
+    
+    <div class="filter-tabs">
+      <button 
+        v-for="category in categories"
+        :key="category"
+        @click="selectedCategory = category"
+        :class="{ active: selectedCategory === category }"
+        class="tab"
+      >
+        {{ category }}
+      </button>
+    </div>
 
-      <div class="tutorials-grid">
-        <div 
-          v-for="tutorial in filteredTutorials" 
-          :key="tutorial.id"
-          class="tutorial-card"
-        >
-          <div class="level" :class="tutorial.level.toLowerCase()">
-            {{ tutorial.level }}
-          </div>
-          <h3>{{ tutorial.title }}</h3>
-          <p class="description">{{ tutorial.description }}</p>
-          <div class="meta">
-            <span class="duration">⏱️ {{ tutorial.duration }} ساعت</span>
-            <span class="lessons">📚 {{ tutorial.lessons }} درس</span>
-          </div>
-          <button class="start-btn">شروع کنید</button>
+    <div class="tutorials-grid">
+      <div 
+        v-for="tutorial in filteredTutorials" 
+        :key="tutorial.id"
+        class="tutorial-card"
+      >
+        <div class="level" :class="tutorial.level.toLowerCase()">
+          {{ tutorial.level }}
         </div>
+        <h3>{{ tutorial.title }}</h3>
+        <p>{{ tutorial.description }}</p>
+        <div class="meta">
+          <span>{{ tutorial.duration }} ساعت</span>
+          <span>{{ tutorial.lessons }} درس</span>
+        </div>
+        <button class="start-btn">شروع</button>
       </div>
     </div>
   </div>
@@ -43,12 +41,12 @@ export default {
   data() {
     return {
       selectedCategory: 'همه',
-      categories: ['همه', 'لینوکس', 'امنیت', 'برنامه‌نویسی', 'DevOps', 'وب'],
+      categories: ['همه', 'لینوکس', 'امنیت', 'برنامه‌نویسی', 'DevOps'],
       tutorials: [
         {
           id: 1,
-          title: 'مقدمه‌ای بر لینوکس',
-          description: 'یاد بگیرید لینوکس را نصب و استفاده کنید. از خط فرمان تا مدیریت سیستم.',
+          title: 'مقدمه لینوکس',
+          description: 'یاد بگیرید لینوکس را نصب و استفاده کنید.',
           category: 'لینوکس',
           level: 'مبتدی',
           duration: 10,
@@ -57,7 +55,7 @@ export default {
         {
           id: 2,
           title: 'امنیت لینوکس پیشرفته',
-          description: 'تکنیک‌های پیشرفته برای تامین امنیت سیستم‌های لینوکس.',
+          description: 'تکنیک‌های پیشرفته برای تامین امنیت.',
           category: 'امنیت',
           level: 'پیشرفته',
           duration: 15,
@@ -65,8 +63,8 @@ export default {
         },
         {
           id: 3,
-          title: 'Bash Scripting از صفر تا قهرمان',
-          description: 'نوشتن script‌های قدرتمند bash برای خودکارسازی کارها.',
+          title: 'Bash Scripting',
+          description: 'نوشتن script‌های قدرتمند bash.',
           category: 'برنامه‌نویسی',
           level: 'متوسط',
           duration: 8,
@@ -75,7 +73,7 @@ export default {
         {
           id: 4,
           title: 'Docker و Container‌ها',
-          description: 'درک کامل Docker و استفاده از Container‌ها در توسعه.',
+          description: 'درک کامل Docker.',
           category: 'DevOps',
           level: 'متوسط',
           duration: 12,
@@ -84,8 +82,8 @@ export default {
         {
           id: 5,
           title: 'Vue.js برای مبتدیان',
-          description: 'آموزش کامل Vue.js و ساخت اپلیکیشن‌های تعاملی.',
-          category: 'وب',
+          description: 'آموزش کامل Vue.js.',
+          category: 'برنامه‌نویسی',
           level: 'مبتدی',
           duration: 14,
           lessons: 35
@@ -93,7 +91,7 @@ export default {
         {
           id: 6,
           title: 'Node.js و Express',
-          description: 'ساخت API‌های RESTful با Node.js و Express.',
+          description: 'ساخت API‌های RESTful.',
           category: 'برنامه‌نویسی',
           level: 'متوسط',
           duration: 11,
@@ -101,8 +99,8 @@ export default {
         },
         {
           id: 7,
-          title: 'مقدمه‌ای بر امنیت سایبری',
-          description: 'اصول بنیادی امنیت سایبری و محافظت از تهدیدات.',
+          title: 'امنیت سایبری مبتدی',
+          description: 'اصول بنیادی امنیت.',
           category: 'امنیت',
           level: 'مبتدی',
           duration: 9,
@@ -110,48 +108,12 @@ export default {
         },
         {
           id: 8,
-          title: 'Kubernetes برای متخصصین',
-          description: 'مدیریت و استقرار اپلیکیشن‌ها با Kubernetes.',
+          title: 'Kubernetes',
+          description: 'مدیریت اپلیکیشن‌ها.',
           category: 'DevOps',
           level: 'پیشرفته',
           duration: 18,
           lessons: 40
-        },
-        {
-          id: 9,
-          title: 'اصول React',
-          description: 'آموزش React و ساخت رابط‌های کاربری مدرن.',
-          category: 'وب',
-          level: 'متوسط',
-          duration: 13,
-          lessons: 32
-        },
-        {
-          id: 10,
-          title: 'Network Security',
-          description: 'امنیت شبکه و محافظت از حملات شبکه‌ای.',
-          category: 'امنیت',
-          level: 'پیشرفته',
-          duration: 16,
-          lessons: 36
-        },
-        {
-          id: 11,
-          title: 'Python برای هکرها',
-          description: 'استفاده از Python برای امنیت و تست نفوذ.',
-          category: 'برنامه‌نویسی',
-          level: 'پیشرفته',
-          duration: 14,
-          lessons: 33
-        },
-        {
-          id: 12,
-          title: 'CI/CD Pipeline',
-          description: 'ساخت خط لوله بهینه برای تهیه و استقرار.',
-          category: 'DevOps',
-          level: 'متوسط',
-          duration: 10,
-          lessons: 24
         }
       ]
     }
@@ -170,41 +132,38 @@ export default {
 <style scoped>
 .tutorials-page {
   color: white;
-}
-
-.container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
 .tutorials-page h2 {
-  font-size: 42px;
-  margin-bottom: 40px;
+  font-size: 36px;
+  margin-bottom: 24px;
   text-align: center;
+  font-weight: 700;
 }
 
 .filter-tabs {
   display: flex;
   justify-content: center;
-  gap: 12px;
-  margin-bottom: 40px;
+  gap: 10px;
+  margin-bottom: 32px;
   flex-wrap: wrap;
 }
 
 .tab {
-  padding: 10px 20px;
+  padding: 8px 16px;
   border: 2px solid rgba(255, 255, 255, 0.3);
   background: transparent;
   color: white;
-  border-radius: 25px;
+  border-radius: 6px;
   cursor: pointer;
   transition: all 0.3s;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
 }
 
-.tab:hover {
+.tab:active {
   border-color: white;
   background: rgba(255, 255, 255, 0.1);
 }
@@ -217,35 +176,34 @@ export default {
 
 .tutorials-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
 }
 
 .tutorial-card {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 25px;
-  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 20px;
+  border-radius: 8px;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   transition: all 0.3s;
   display: flex;
   flex-direction: column;
   position: relative;
 }
 
-.tutorial-card:hover {
-  background: rgba(255, 255, 255, 0.15);
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+.tutorial-card:active {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-3px);
 }
 
 .level {
   position: absolute;
-  top: 15px;
-  right: 15px;
-  padding: 5px 12px;
-  border-radius: 5px;
-  font-size: 12px;
+  top: 12px;
+  right: 12px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 11px;
   font-weight: 600;
   color: white;
 }
@@ -263,57 +221,69 @@ export default {
 }
 
 .tutorial-card h3 {
-  font-size: 20px;
-  margin-bottom: 12px;
-  margin-top: 30px;
+  font-size: 15px;
+  margin-bottom: 8px;
+  margin-top: 24px;
   line-height: 1.4;
+  font-weight: 600;
 }
 
-.description {
-  font-size: 14px;
-  opacity: 0.8;
-  margin-bottom: 20px;
+.tutorial-card p {
+  font-size: 12px;
+  opacity: 0.75;
+  margin-bottom: 12px;
   flex-grow: 1;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .meta {
   display: flex;
-  gap: 20px;
-  margin-bottom: 20px;
-  font-size: 13px;
-  opacity: 0.7;
+  gap: 16px;
+  margin-bottom: 12px;
+  font-size: 12px;
+  opacity: 0.6;
 }
 
 .start-btn {
-  padding: 12px 24px;
+  padding: 10px 16px;
   background: white;
   color: #667eea;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s;
-  font-size: 14px;
+  font-size: 12px;
 }
 
-.start-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+.start-btn:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 @media (max-width: 768px) {
   .tutorials-page h2 {
-    font-size: 28px;
+    font-size: 24px;
   }
   
   .filter-tabs {
     justify-content: flex-start;
     overflow-x: auto;
+    gap: 8px;
   }
   
   .tutorials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .tutorials-grid {
     grid-template-columns: 1fr;
+  }
+  
+  .tutorial-card {
+    padding: 16px;
   }
 }
 </style>

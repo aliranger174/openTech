@@ -1,66 +1,64 @@
 <template>
   <div class="home-page">
-    <div class="container">
-      <section class="hero">
-        <h2>خوش آمدید به TechHub</h2>
-        <p>بزرگترین منبع اطلاعات درباره تکنولوژی، لینوکس و امنیت سایبری</p>
-        <div class="hero-buttons">
-          <router-link to="/news" class="btn btn-primary">اخبار تازه</router-link>
-          <router-link to="/tutorials" class="btn btn-secondary">شروع یادگیری</router-link>
-        </div>
-      </section>
+    <section class="hero">
+      <h2>خوش آمدید</h2>
+      <p>بزرگترین منبع اطلاعات تکنولوژی</p>
+      <div class="hero-buttons">
+        <router-link to="/news" class="btn btn-primary">اخبار</router-link>
+        <router-link to="/tutorials" class="btn btn-secondary">یادگیری</router-link>
+      </div>
+    </section>
 
-      <section class="categories">
-        <div class="category-card">
-          <div class="icon">📰</div>
-          <h3>اخبار تکنولوژی</h3>
-          <p>آخرین اخبار دنیای فناوری و توسعه نرم‌افزار</p>
-          <router-link to="/news" class="link">مشاهده</router-link>
-        </div>
+    <section class="categories">
+      <div class="category-card">
+        <div class="icon">📰</div>
+        <h3>اخبار</h3>
+        <p>آخرین اخبار فناوری</p>
+        <router-link to="/news" class="link">→</router-link>
+      </div>
 
-        <div class="category-card">
-          <div class="icon">🎓</div>
-          <h3>آموزش‌ها</h3>
-          <p>آموزش‌های عملی درباره لینوکس، برنامه‌نویسی و امنیت</p>
-          <router-link to="/tutorials" class="link">مشاهده</router-link>
-        </div>
+      <div class="category-card">
+        <div class="icon">🎓</div>
+        <h3>آموزش</h3>
+        <p>دوره‌های تخصصی</p>
+        <router-link to="/tutorials" class="link">→</router-link>
+      </div>
 
-        <div class="category-card">
-          <div class="icon">📚</div>
-          <h3>کتاب‌های فنی</h3>
-          <p>معرفی بهترین کتاب‌ها برای تعمیق دانش تکنولوژی</p>
-          <router-link to="/books" class="link">مشاهده</router-link>
-        </div>
+      <div class="category-card">
+        <div class="icon">📚</div>
+        <h3>کتاب‌ها</h3>
+        <p>منابع فنی معروف</p>
+        <router-link to="/books" class="link">→</router-link>
+      </div>
 
-        <div class="category-card">
-          <div class="icon">🔒</div>
-          <h3>امنیت سایبری</h3>
-          <p>مقالات و آموزش‌های تخصصی درباره امنیت دیجیتال</p>
-          <router-link to="/news" class="link">مشاهده</router-link>
-        </div>
-      </section>
+      <div class="category-card">
+        <div class="icon">🔒</div>
+        <h3>امنیت</h3>
+        <p>مقالات امنیتی</p>
+        <router-link to="/news" class="link">→</router-link>
+      </div>
+    </section>
 
-      <section class="featured">
-        <h3>محتوای برگزیده</h3>
-        <div class="featured-items">
-          <div class="featured-item">
-            <div class="tag">جدید</div>
-            <h4>راهنمای کامل لینوکس برای مبتدیان</h4>
-            <p>یاد بگیرید چگونه لینوکس را نصب و استفاده کنید...</p>
-          </div>
-          <div class="featured-item">
-            <div class="tag">ترند</div>
-            <h4>هوش مصنوعی در توسعه نرم‌افزار</h4>
-            <p>نقش هوش مصنوعی در آینده برنامه‌نویسی...</p>
-          </div>
-          <div class="featured-item">
-            <div class="tag">مهم</div>
-            <h4>10 نکته برای ایمن‌تر شدن آنلاین</h4>
-            <p>نکات عملی برای محافظت از حریم خصوصی و امنیت...</p>
-          </div>
+    <section class="featured">
+      <h3>برگزیده</h3>
+      <div class="featured-items">
+        <div class="featured-item">
+          <div class="tag">جدید</div>
+          <h4>راهنمای لینوکس</h4>
+          <p>یادگیری لینوکس برای مبتدیان</p>
         </div>
-      </section>
-    </div>
+        <div class="featured-item">
+          <div class="tag">ترند</div>
+          <h4>هوش مصنوعی</h4>
+          <p>نقش AI در برنامه‌نویسی</p>
+        </div>
+        <div class="featured-item">
+          <div class="tag">مهم</div>
+          <h4>امنیت آنلاین</h4>
+          <p>نکات محافظت حریم خصوصی</p>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -73,57 +71,54 @@ export default {
 <style scoped>
 .home-page {
   color: white;
-}
-
-.container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
 .hero {
   text-align: center;
-  margin-bottom: 80px;
-  animation: fadeIn 0.8s ease-in;
+  margin-bottom: 50px;
+  animation: slideUp 0.6s ease-out;
 }
 
 .hero h2 {
-  font-size: 48px;
-  margin-bottom: 20px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-size: 42px;
+  margin-bottom: 12px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .hero p {
-  font-size: 20px;
-  margin-bottom: 40px;
+  font-size: 18px;
+  margin-bottom: 32px;
   opacity: 0.9;
 }
 
 .hero-buttons {
   display: flex;
-  gap: 20px;
+  gap: 16px;
   justify-content: center;
   flex-wrap: wrap;
 }
 
 .btn {
-  padding: 12px 30px;
-  border-radius: 5px;
+  padding: 12px 28px;
+  border-radius: 6px;
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s;
   display: inline-block;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .btn-primary {
-  background: #fff;
+  background: white;
   color: #667eea;
 }
 
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+.btn-primary:active {
+  transform: scale(0.98);
 }
 
 .btn-secondary {
@@ -132,119 +127,120 @@ export default {
   border: 2px solid white;
 }
 
-.btn-secondary:hover {
-  background: white;
-  color: #667eea;
+.btn-secondary:active {
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .categories {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  margin-bottom: 80px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+  margin-bottom: 50px;
 }
 
 .category-card {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 30px;
-  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 20px;
+  border-radius: 8px;
   backdrop-filter: blur(10px);
   transition: all 0.3s;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   text-align: center;
 }
 
-.category-card:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+.category-card:active {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-3px);
 }
 
 .category-card .icon {
-  font-size: 48px;
-  margin-bottom: 15px;
+  font-size: 36px;
+  margin-bottom: 12px;
 }
 
 .category-card h3 {
-  margin-bottom: 10px;
-  font-size: 20px;
+  margin-bottom: 6px;
+  font-size: 16px;
 }
 
 .category-card p {
-  font-size: 14px;
-  opacity: 0.8;
-  margin-bottom: 20px;
+  font-size: 12px;
+  opacity: 0.75;
+  margin-bottom: 12px;
 }
 
 .link {
   color: white;
   text-decoration: none;
   font-weight: 600;
-  border-bottom: 2px solid white;
-  transition: all 0.3s;
   display: inline-block;
+  opacity: 0.8;
+  transition: all 0.3s;
 }
 
-.link:hover {
-  opacity: 0.8;
+.link:active {
+  opacity: 1;
 }
 
 .featured {
-  background: rgba(255, 255, 255, 0.95);
-  padding: 50px;
-  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.92);
+  padding: 32px 20px;
+  border-radius: 8px;
   color: #333;
 }
 
 .featured h3 {
-  font-size: 32px;
-  margin-bottom: 30px;
+  font-size: 24px;
+  margin-bottom: 24px;
   color: #667eea;
+  font-weight: 700;
 }
 
 .featured-items {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
 }
 
 .featured-item {
-  background: #f5f5f5;
-  padding: 20px;
-  border-radius: 8px;
+  background: #f8f9fa;
+  padding: 16px;
+  border-radius: 6px;
   position: relative;
   transition: all 0.3s;
 }
 
-.featured-item:hover {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transform: translateY(-3px);
+.featured-item:active {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
 }
 
 .featured-item .tag {
   position: absolute;
-  top: -10px;
-  right: 15px;
+  top: -8px;
+  right: 12px;
   background: #667eea;
   color: white;
-  padding: 5px 15px;
-  border-radius: 20px;
-  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 11px;
   font-weight: 600;
 }
 
 .featured-item h4 {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 8px;
+  margin-bottom: 8px;
   color: #667eea;
+  font-size: 14px;
 }
 
 .featured-item p {
-  font-size: 14px;
+  font-size: 12px;
   color: #666;
+  line-height: 1.4;
 }
 
-@keyframes fadeIn {
+@keyframes slideUp {
   from {
     opacity: 0;
     transform: translateY(20px);
@@ -257,11 +253,59 @@ export default {
 
 @media (max-width: 768px) {
   .hero h2 {
-    font-size: 32px;
+    font-size: 28px;
+  }
+  
+  .hero p {
+    font-size: 15px;
+  }
+  
+  .categories {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
   }
   
   .featured {
-    padding: 20px;
+    padding: 24px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .hero p {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+  
+  .hero-buttons {
+    gap: 10px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+  
+  .categories {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .category-card {
+    padding: 16px;
+  }
+  
+  .category-card .icon {
+    font-size: 28px;
+  }
+  
+  .featured-items {
+    grid-template-columns: 1fr;
   }
 }
 </style>
