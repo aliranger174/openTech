@@ -17,6 +17,7 @@
           <router-link to="/news" class="nav-link" @click="mobileMenuOpen = false">اخبار</router-link>
           <router-link to="/tutorials" class="nav-link" @click="mobileMenuOpen = false">آموزش‌ها</router-link>
           <router-link to="/books" class="nav-link" @click="mobileMenuOpen = false">کتاب‌ها</router-link>
+          <router-link to="/projects" class="nav-link" @click="mobileMenuOpen = false">پروژه‌ها</router-link>
         </nav>
       </div>
     </header>

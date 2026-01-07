@@ -37,6 +37,13 @@
         <p>مقالات امنیتی</p>
         <router-link to="/news" class="link">→</router-link>
       </div>
+
+      <div class="category-card">
+        <div class="icon">💼</div>
+        <h3>پروژه‌ها</h3>
+        <p>نمونه‌های کاری</p>
+        <router-link to="/projects" class="link">→</router-link>
+      </div>
     </section>
 
     <section class="featured">
