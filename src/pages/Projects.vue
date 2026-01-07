@@ -194,6 +194,10 @@ export default {
   margin-bottom: 24px;
   text-align: center;
   font-weight: 700;
+  background: linear-gradient(135deg, #a78bfa 0%, #06b6d4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .filter-tabs {
@@ -206,9 +210,9 @@ export default {
 
 .tab {
   padding: 8px 16px;
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(124, 58, 237, 0.4);
   background: transparent;
-  color: white;
+  color: #e2e8f0;
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.3s;
@@ -217,14 +221,14 @@ export default {
 }
 
 .tab:active {
-  border-color: white;
-  background: rgba(255, 255, 255, 0.1);
+  border-color: #7c3aed;
+  background: rgba(124, 58, 237, 0.1);
 }
 
 .tab.active {
-  background: white;
-  color: #667eea;
-  border-color: white;
+  background: linear-gradient(135deg, #7c3aed 0%, #06b6d4 100%);
+  color: white;
+  border-color: transparent;
 }
 
 .projects-grid {
@@ -234,20 +238,20 @@ export default {
 }
 
 .project-card {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(124, 58, 237, 0.1);
   padding: 20px;
   border-radius: 8px;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(124, 58, 237, 0.3);
   transition: all 0.3s;
   display: flex;
   flex-direction: column;
 }
 
 .project-card:active {
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(124, 58, 237, 0.15);
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.2);
 }
 
 .project-header {
@@ -270,11 +274,11 @@ export default {
 }
 
 .status.فعال {
-  background: #27ae60;
+  background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
 }
 
 .status.درحال‌توسعه {
-  background: #f39c12;
+  background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%);
 }
 
 .project-card h3 {
@@ -282,6 +286,7 @@ export default {
   margin-bottom: 8px;
   line-height: 1.4;
   font-weight: 600;
+  color: #c4b5fd;
 }
 
 .description {
@@ -290,6 +295,7 @@ export default {
   margin-bottom: 12px;
   flex-grow: 1;
   line-height: 1.5;
+  color: #cbd5e1;
 }
 
 .technologies {
@@ -302,11 +308,11 @@ export default {
 .tech-tag {
   display: inline-block;
   padding: 4px 10px;
-  background: rgba(102, 126, 234, 0.2);
-  border: 1px solid rgba(102, 126, 234, 0.4);
+  background: rgba(124, 58, 237, 0.25);
+  border: 1px solid rgba(124, 58, 237, 0.5);
   border-radius: 4px;
   font-size: 11px;
-  color: #b3d9ff;
+  color: #c4b5fd;
 }
 
 .footer {
@@ -314,16 +320,17 @@ export default {
   justify-content: space-between;
   align-items: center;
   padding-top: 12px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(124, 58, 237, 0.2);
   font-size: 12px;
 }
 
 .date {
   opacity: 0.6;
+  color: #cbd5e1;
 }
 
 .view-btn {
-  color: white;
+  color: #a78bfa;
   text-decoration: none;
   font-weight: 600;
 }

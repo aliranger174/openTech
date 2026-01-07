@@ -78,7 +78,7 @@ export default {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #15213e 100%);
 }
 
 .progress-bar {
@@ -86,19 +86,21 @@ export default {
   top: 0;
   left: 0;
   height: 3px;
-  background: linear-gradient(90deg, #667eea, #764ba2, #667eea);
+  background: linear-gradient(90deg, #7c3aed 0%, #0ddbffff 50%, #3413adff 100%);
   transition: width 0.3s ease;
   z-index: 200;
-  box-shadow: 0 0 10px rgba(102, 126, 234, 0.8);
+  box-shadow: 0 0 15px rgba(124, 58, 237, 0.8);
 }
 
 .header {
-  background: rgba(255, 255, 255, 0.95);
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  background: rgba(15, 23, 42, 0.5);
+  backdrop-filter: blur(30px) saturate(180%);
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
+  border-bottom: 1px solid rgba(124, 58, 237, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   position: sticky;
   top: 0;
   z-index: 100;
-  backdrop-filter: blur(10px);
 }
 
 .header-content {
@@ -111,28 +113,37 @@ export default {
 }
 
 .logo h1 {
-  color: #667eea;
+  color: #7c3aed;
   font-size: 22px;
   margin: 0;
   padding: 12px 0;
   font-weight: 700;
   letter-spacing: -0.5px;
+  text-shadow: 0 2px 8px rgba(124, 58, 237, 0.3);
 }
 
 .menu-toggle {
   display: none;
   flex-direction: column;
-  background: none;
-  border: none;
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(124, 58, 237, 0.4);
+  border-radius: 6px;
   cursor: pointer;
   padding: 8px;
   gap: 6px;
+  transition: all 0.3s;
+  backdrop-filter: blur(10px);
+}
+
+.menu-toggle:active {
+  background: rgba(124, 58, 237, 0.2);
+  border-color: rgba(124, 58, 237, 0.6);
 }
 
 .menu-toggle span {
   width: 24px;
   height: 2.5px;
-  background: #667eea;
+  background: #7c3aed;
   border-radius: 2px;
   transition: all 0.3s;
 }
@@ -145,28 +156,29 @@ export default {
 
 .nav-link {
   text-decoration: none;
-  color: #333;
+  color: #e2e8f0;
   font-weight: 500;
   transition: all 0.3s;
   font-size: 14px;
-  padding: 8px 0;
+  padding: 8px 16px;
   position: relative;
+  border-radius: 6px;
+  background: rgba(124, 58, 237, 0.1);
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  backdrop-filter: blur(10px);
 }
 
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: #667eea;
-  transition: width 0.3s;
+.nav-link:hover {
+  background: rgba(124, 58, 237, 0.2);
+  border-color: rgba(124, 58, 237, 0.5);
+  color: #a78bfa;
 }
 
-.nav-link:hover::after,
-.nav-link.router-link-active::after {
-  width: 100%;
+.nav-link.router-link-active {
+  background: rgba(124, 58, 237, 0.3);
+  color: #c4b5fd;
+  border-color: rgba(124, 58, 237, 0.6);
+  backdrop-filter: blur(10px);
 }
 
 .main {
@@ -175,13 +187,15 @@ export default {
 }
 
 .footer {
-  background: rgba(0, 0, 0, 0.85);
-  color: white;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(20px);
+  color: #e2e8f0;
   text-align: center;
   padding: 24px 16px;
   margin-top: auto;
   font-size: 13px;
   letter-spacing: 0.5px;
+  border-top: 1px solid rgba(124, 58, 237, 0.2);
 }
 
 .footer p {
@@ -199,13 +213,17 @@ export default {
     left: 0;
     right: 0;
     flex-direction: column;
-    background: white;
+    background: rgba(15, 23, 42, 0.5);
+    backdrop-filter: blur(30px) saturate(180%);
+    -webkit-backdrop-filter: blur(30px) saturate(180%);
+    border: 1px solid rgba(124, 58, 237, 0.3);
+    border-top: none;
     padding: 16px;
     gap: 12px;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s;
-    border-bottom: 1px solid #f0f0f0;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
   }
   
   .nav.active {
@@ -213,8 +231,17 @@ export default {
   }
   
   .nav-link {
-    padding: 10px 0;
-    font-size: 15px;
+    padding: 12px 16px;
+    font-size: 14px;
+    background: rgba(124, 58, 237, 0.1);
+    border: 1px solid rgba(124, 58, 237, 0.3);
+    border-radius: 6px;
+    backdrop-filter: blur(10px);
+  }
+  
+  .nav-link:active {
+    background: rgba(124, 58, 237, 0.2);
+    border-color: rgba(124, 58, 237, 0.5);
   }
   
   .logo h1 {

@@ -93,7 +93,11 @@ export default {
   margin-bottom: 12px;
   font-weight: 700;
   letter-spacing: -1px;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #a78bfa 0%, #06b6d4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .hero p {
@@ -120,22 +124,24 @@ export default {
 }
 
 .btn-primary {
-  background: white;
-  color: #667eea;
+  background: linear-gradient(135deg, #7c3aed 0%, #06b6d4 100%);
+  color: white;
 }
 
 .btn-primary:active {
   transform: scale(0.98);
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.4);
 }
 
 .btn-secondary {
   background: transparent;
   color: white;
-  border: 2px solid white;
+  border: 2px solid rgba(124, 58, 237, 0.6);
 }
 
 .btn-secondary:active {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(124, 58, 237, 0.1);
+  border-color: rgba(124, 58, 237, 1);
 }
 
 .categories {
@@ -146,18 +152,19 @@ export default {
 }
 
 .category-card {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(124, 58, 237, 0.1);
   padding: 20px;
   border-radius: 8px;
   backdrop-filter: blur(10px);
   transition: all 0.3s;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(124, 58, 237, 0.3);
   text-align: center;
 }
 
 .category-card:active {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(124, 58, 237, 0.2);
   transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.2);
 }
 
 .category-card .icon {
@@ -190,16 +197,18 @@ export default {
 }
 
 .featured {
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(15, 23, 42, 0.4);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(124, 58, 237, 0.3);
   padding: 32px 20px;
   border-radius: 8px;
-  color: #333;
+  color: #e2e8f0;
 }
 
 .featured h3 {
   font-size: 24px;
   margin-bottom: 24px;
-  color: #667eea;
+  color: #a78bfa;
   font-weight: 700;
 }
 
@@ -210,23 +219,25 @@ export default {
 }
 
 .featured-item {
-  background: #f8f9fa;
+  background: rgba(124, 58, 237, 0.1);
   padding: 16px;
   border-radius: 6px;
   position: relative;
   transition: all 0.3s;
+  border: 1px solid rgba(124, 58, 237, 0.3);
 }
 
 .featured-item:active {
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 3px 10px rgba(124, 58, 237, 0.2);
   transform: translateY(-2px);
+  background: rgba(124, 58, 237, 0.15);
 }
 
 .featured-item .tag {
   position: absolute;
   top: -8px;
   right: 12px;
-  background: #667eea;
+  background: linear-gradient(135deg, #7c3aed 0%, #06b6d4 100%);
   color: white;
   padding: 4px 12px;
   border-radius: 12px;
@@ -237,13 +248,13 @@ export default {
 .featured-item h4 {
   margin-top: 8px;
   margin-bottom: 8px;
-  color: #667eea;
+  color: #a78bfa;
   font-size: 14px;
 }
 
 .featured-item p {
   font-size: 12px;
-  color: #666;
+  color: #cbd5e1;
   line-height: 1.4;
 }
 

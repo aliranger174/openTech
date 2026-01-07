@@ -141,6 +141,10 @@ export default {
   margin-bottom: 24px;
   text-align: center;
   font-weight: 700;
+  background: linear-gradient(135deg, #a78bfa 0%, #06b6d4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .filter-tabs {
@@ -153,9 +157,9 @@ export default {
 
 .tab {
   padding: 8px 16px;
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(124, 58, 237, 0.4);
   background: transparent;
-  color: white;
+  color: #e2e8f0;
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.3s;
@@ -164,14 +168,14 @@ export default {
 }
 
 .tab:active {
-  border-color: white;
-  background: rgba(255, 255, 255, 0.1);
+  border-color: #7c3aed;
+  background: rgba(124, 58, 237, 0.1);
 }
 
 .tab.active {
-  background: white;
-  color: #667eea;
-  border-color: white;
+  background: linear-gradient(135deg, #7c3aed 0%, #06b6d4 100%);
+  color: white;
+  border-color: transparent;
 }
 
 .tutorials-grid {
@@ -181,11 +185,11 @@ export default {
 }
 
 .tutorial-card {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(124, 58, 237, 0.1);
   padding: 20px;
   border-radius: 8px;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(124, 58, 237, 0.3);
   transition: all 0.3s;
   display: flex;
   flex-direction: column;
@@ -193,7 +197,7 @@ export default {
 }
 
 .tutorial-card:active {
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(124, 58, 237, 0.15);
   transform: translateY(-3px);
 }
 
@@ -209,15 +213,15 @@ export default {
 }
 
 .level.مبتدی {
-  background: #27ae60;
+  background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
 }
 
 .level.متوسط {
-  background: #f39c12;
+  background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%);
 }
 
 .level.پیشرفته {
-  background: #e74c3c;
+  background: linear-gradient(135deg, #ef4444 0%, #f97316 100%);
 }
 
 .tutorial-card h3 {
@@ -226,6 +230,7 @@ export default {
   margin-top: 24px;
   line-height: 1.4;
   font-weight: 600;
+  color: #c4b5fd;
 }
 
 .tutorial-card p {
@@ -234,6 +239,7 @@ export default {
   margin-bottom: 12px;
   flex-grow: 1;
   line-height: 1.5;
+  color: #cbd5e1;
 }
 
 .meta {
@@ -246,8 +252,8 @@ export default {
 
 .start-btn {
   padding: 10px 16px;
-  background: white;
-  color: #667eea;
+  background: linear-gradient(135deg, #7c3aed 0%, #06b6d4 100%);
+  color: white;
   border: none;
   border-radius: 4px;
   font-weight: 600;
@@ -258,7 +264,7 @@ export default {
 
 .start-btn:active {
   transform: scale(0.95);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.3);
 }
 
 @media (max-width: 768px) {

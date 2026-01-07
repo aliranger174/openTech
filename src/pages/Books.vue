@@ -181,6 +181,10 @@ export default {
   margin-bottom: 32px;
   text-align: center;
   font-weight: 700;
+  background: linear-gradient(135deg, #a78bfa 0%, #06b6d4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .books-grid {
@@ -190,30 +194,30 @@ export default {
 }
 
 .book-card {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(124, 58, 237, 0.1);
   padding: 16px;
   border-radius: 8px;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(124, 58, 237, 0.3);
   transition: all 0.3s;
   display: flex;
   flex-direction: column;
 }
 
 .book-card:active {
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(124, 58, 237, 0.15);
   transform: translateY(-3px);
 }
 
 .book-cover {
-  background: linear-gradient(135deg, rgba(102,126,234,0.2) 0%, rgba(118,75,162,0.2) 100%);
+  background: linear-gradient(135deg, rgba(124,58,237,0.2) 0%, rgba(6,182,212,0.2) 100%);
   height: 140px;
   border-radius: 6px;
   margin-bottom: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(124, 58, 237, 0.3);
 }
 
 .cover-icon {
@@ -225,13 +229,14 @@ export default {
   margin-bottom: 6px;
   line-height: 1.3;
   font-weight: 600;
+  color: #c4b5fd;
 }
 
 .author {
   font-size: 11px;
   opacity: 0.6;
   margin-bottom: 8px;
-  color: #b3d9ff;
+  color: #a5f3fc;
 }
 
 .description {
@@ -240,6 +245,7 @@ export default {
   margin-bottom: 10px;
   flex-grow: 1;
   line-height: 1.4;
+  color: #cbd5e1;
 }
 
 .info {
@@ -248,18 +254,19 @@ export default {
   margin-bottom: 8px;
   font-size: 11px;
   opacity: 0.6;
+  color: #cbd5e1;
 }
 
 .rating {
   font-size: 12px;
-  color: #ffd700;
+  color: #fbbf24;
   margin-bottom: 10px;
 }
 
 .btn {
   padding: 8px 12px;
-  background: white;
-  color: #667eea;
+  background: linear-gradient(135deg, #7c3aed 0%, #06b6d4 100%);
+  color: white;
   border: none;
   border-radius: 4px;
   font-weight: 600;
@@ -270,6 +277,7 @@ export default {
 
 .btn:active {
   transform: scale(0.95);
+  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.3);
 }
 
 @media (max-width: 768px) {

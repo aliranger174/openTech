@@ -147,6 +147,10 @@ export default {
   margin-bottom: 24px;
   text-align: center;
   font-weight: 700;
+  background: linear-gradient(135deg, #a78bfa 0%, #06b6d4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .search-bar {
@@ -162,13 +166,21 @@ export default {
   border: none;
   border-radius: 6px;
   font-size: 14px;
-  background: white;
+  background: rgba(124, 58, 237, 0.15);
+  color: #e2e8f0;
+  border: 1px solid rgba(124, 58, 237, 0.4);
   transition: all 0.3s;
+}
+
+.search-bar input::placeholder {
+  color: #94a3b8;
 }
 
 .search-bar input:focus {
   outline: none;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background: rgba(124, 58, 237, 0.2);
+  border-color: rgba(124, 58, 237, 0.7);
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.2);
 }
 
 .news-grid {
@@ -179,20 +191,20 @@ export default {
 }
 
 .news-card {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(124, 58, 237, 0.1);
   padding: 20px;
   border-radius: 8px;
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(124, 58, 237, 0.3);
   transition: all 0.3s;
   display: flex;
   flex-direction: column;
 }
 
 .news-card:active {
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(124, 58, 237, 0.15);
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.2);
 }
 
 .news-header {
@@ -221,6 +233,7 @@ export default {
   margin-bottom: 10px;
   line-height: 1.4;
   font-weight: 600;
+  color: #c4b5fd;
 }
 
 .news-card p {
@@ -229,6 +242,7 @@ export default {
   margin-bottom: 12px;
   flex-grow: 1;
   line-height: 1.5;
+  color: #cbd5e1;
 }
 
 .footer {
