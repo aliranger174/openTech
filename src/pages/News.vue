@@ -14,6 +14,8 @@
         v-for="article in filteredNews" 
         :key="article.id"
         class="news-card"
+        @click="goToDetail(article.id)"
+        style="cursor: pointer;"
       >
         <div class="news-header">
           <span class="category" :style="{ background: getCategoryColor(article.category) }">
@@ -25,7 +27,7 @@
         <p>{{ article.description }}</p>
         <div class="footer">
           <span class="read-time">{{ article.readTime }} دقیقه</span>
-          <a href="#" class="read-more">ادامه →</a>
+          <a href="#" class="read-more" @click.prevent>ادامه →</a>
         </div>
       </article>
     </div>
@@ -130,6 +132,9 @@ export default {
         'سخت‌افزار': '#34495e'
       }
       return colors[category] || '#667eea'
+    },
+    goToDetail(id) {
+      this.$router.push(`/news/${id}`)
     }
   }
 }

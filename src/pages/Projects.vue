@@ -19,6 +19,8 @@
         v-for="project in filteredProjects" 
         :key="project.id"
         class="project-card"
+        @click="goToDetail(project.id)"
+        style="cursor: pointer;"
       >
         <div class="project-header">
           <div class="icon">{{ project.icon }}</div>
@@ -33,7 +35,7 @@
         </div>
         <div class="footer">
           <span class="date">{{ project.date }}</span>
-          <a href="#" class="view-btn">مشاهده →</a>
+          <a href="#" class="view-btn" @click.prevent>مشاهده →</a>
         </div>
       </div>
     </div>
@@ -177,6 +179,11 @@ export default {
         return this.projects
       }
       return this.projects.filter(p => p.category === this.selectedCategory)
+    }
+  },
+  methods: {
+    goToDetail(id) {
+      this.$router.push(`/projects/${id}`)
     }
   }
 }

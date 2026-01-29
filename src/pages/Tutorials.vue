@@ -19,6 +19,8 @@
         v-for="tutorial in filteredTutorials" 
         :key="tutorial.id"
         class="tutorial-card"
+        @click="goToDetail(tutorial.id)"
+        style="cursor: pointer;"
       >
         <div class="level" :class="tutorial.level.toLowerCase()">
           {{ tutorial.level }}
@@ -29,7 +31,7 @@
           <span>{{ tutorial.duration }} ساعت</span>
           <span>{{ tutorial.lessons }} درس</span>
         </div>
-        <button class="start-btn">شروع</button>
+        <button class="start-btn" @click.prevent>شروع</button>
       </div>
     </div>
   </div>
@@ -124,6 +126,11 @@ export default {
         return this.tutorials
       }
       return this.tutorials.filter(t => t.category === this.selectedCategory)
+    }
+  },
+  methods: {
+    goToDetail(id) {
+      this.$router.push(`/tutorials/${id}`)
     }
   }
 }

@@ -7,6 +7,8 @@
         v-for="book in books" 
         :key="book.id"
         class="book-card"
+        @click="goToDetail(book.id)"
+        style="cursor: pointer;"
       >
         <div class="book-cover">
           <div class="cover-icon">{{ book.icon }}</div>
@@ -19,7 +21,7 @@
           <span>{{ book.year }}</span>
         </div>
         <div class="rating">⭐ {{ book.rating }}</div>
-        <button class="btn">بیشتر</button>
+        <button class="btn" @click.prevent>بیشتر</button>
       </div>
     </div>
   </div>
@@ -164,6 +166,11 @@ export default {
           icon: '⚙️'
         }
       ]
+    }
+  },
+  methods: {
+    goToDetail(id) {
+      this.$router.push(`/books/${id}`)
     }
   }
 }
