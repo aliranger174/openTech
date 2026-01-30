@@ -3,6 +3,7 @@
     <button class="back-btn" @click="goBack">← بازگشت</button>
     
     <article v-if="article" class="article">
+      <img :src="getImageForCategory(article.category)" :alt="article.title" class="featured-image">
       <div class="article-header">
         <h1>{{ article.title }}</h1>
         <div class="meta">
@@ -117,6 +118,17 @@ export default {
     goBack() {
       this.$router.back()
     },
+    getImageForCategory(category) {
+      const images = {
+        'لینوکس': '/images/category-linux.svg',
+        'AI': '/images/category-ai.svg',
+        'امنیت': '/images/category-security.svg',
+        'DevOps': '/images/category-devops.svg',
+        'برنامه‌نویسی': '/images/category-programming.svg',
+        'سخت‌افزار': '/images/category-hardware.svg'
+      }
+      return images[category] || '/images/news.svg'
+    },
     getCategoryColor(category) {
       const colors = {
         'لینوکس': '#e74c3c',
@@ -159,6 +171,18 @@ export default {
   border-radius: 12px;
   border: 1px solid rgba(124, 58, 237, 0.3);
   backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+
+.featured-image {
+  width: calc(100% + 80px);
+  margin-left: -40px;
+  margin-right: -40px;
+  margin-top: -40px;
+  margin-bottom: 24px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 0;
 }
 
 .article-header h1 {

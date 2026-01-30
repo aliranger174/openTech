@@ -3,6 +3,7 @@
     <button class="back-btn" @click="goBack">← بازگشت</button>
     
     <div v-if="tutorial" class="tutorial-container">
+      <img :src="getImageForCategory(tutorial.category)" :alt="tutorial.title" class="featured-image">
       <div class="header">
         <h1>{{ tutorial.title }}</h1>
         <div class="meta">
@@ -114,6 +115,15 @@ export default {
     }
   },
   methods: {
+    getImageForCategory(category) {
+      const images = {
+        'لینوکس': '/images/category-linux.svg',
+        'امنیت': '/images/category-security.svg',
+        'برنامه‌نویسی': '/images/category-programming.svg',
+        'DevOps': '/images/category-devops.svg'
+      }
+      return images[category] || '/images/category-tutorials.svg'
+    },
     goBack() {
       this.$router.back()
     }
@@ -148,6 +158,18 @@ export default {
   border-radius: 12px;
   border: 1px solid rgba(124, 58, 237, 0.3);
   backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+
+.featured-image {
+  width: calc(100% + 80px);
+  margin-left: -40px;
+  margin-right: -40px;
+  margin-top: -40px;
+  margin-bottom: 24px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 0;
 }
 
 .header h1 {

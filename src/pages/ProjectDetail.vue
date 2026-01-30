@@ -3,6 +3,7 @@
     <button class="back-btn" @click="goBack">← بازگشت</button>
     
     <div v-if="project" class="project-container">
+      <img :src="getImageForCategory(project.category)" :alt="project.title" class="featured-image">
       <div class="header">
         <div class="header-top">
           <div class="project-icon">{{ project.icon }}</div>
@@ -115,6 +116,15 @@ export default {
     }
   },
   methods: {
+    getImageForCategory(category) {
+      const images = {
+        'وب': '/images/projects.svg',
+        'موبایل': '/images/projects.svg',
+        'ابزار': '/images/projects.svg',
+        'دیگر': '/images/projects.svg'
+      }
+      return images[category] || '/images/category-projects.svg'
+    },
     goBack() {
       this.$router.back()
     }
@@ -149,6 +159,18 @@ export default {
   border-radius: 12px;
   border: 1px solid rgba(124, 58, 237, 0.3);
   backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+
+.featured-image {
+  width: calc(100% + 80px);
+  margin-left: -40px;
+  margin-right: -40px;
+  margin-top: -40px;
+  margin-bottom: 24px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 0;
 }
 
 .header-top {

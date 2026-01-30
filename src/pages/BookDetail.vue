@@ -4,7 +4,7 @@
     
     <div v-if="book" class="book-container">
       <div class="book-cover-section">
-        <div class="book-cover-large">
+        <div class="book-cover-large" :style="{ backgroundImage: `url(/images/category-books.svg)` }">
           <div class="cover-icon">{{ book.icon }}</div>
         </div>
       </div>
@@ -174,6 +174,8 @@ export default {
   align-items: center;
   justify-content: center;
   font-size: 120px;
+  background-size: cover;
+  background-position: center;
 }
 
 .book-info h1 {
