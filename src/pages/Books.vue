@@ -10,7 +10,7 @@
         @click="goToDetail(book.id)"
         style="cursor: pointer;"
       >
-        <div class="book-cover">
+        <div class="book-cover" :style="{ backgroundImage: `url(/images/category-books.svg)` }">
           <div class="cover-icon">{{ book.icon }}</div>
         </div>
         <h3>{{ book.title }}</h3>
@@ -217,7 +217,8 @@ export default {
 }
 
 .book-cover {
-  background: linear-gradient(135deg, rgba(124,58,237,0.2) 0%, rgba(6,182,212,0.2) 100%);
+  background-size: cover;
+  background-position: center;
   height: 140px;
   border-radius: 6px;
   margin-bottom: 12px;

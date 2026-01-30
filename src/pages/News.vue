@@ -17,6 +17,7 @@
         @click="goToDetail(article.id)"
         style="cursor: pointer;"
       >
+        <img :src="getImageForCategory(article.category)" :alt="article.title" class="news-image">
         <div class="news-header">
           <span class="category" :style="{ background: getCategoryColor(article.category) }">
             {{ article.category }}
@@ -133,6 +134,17 @@ export default {
       }
       return colors[category] || '#667eea'
     },
+    getImageForCategory(category) {
+      const images = {
+        'لینوکس': '/images/category-linux.svg',
+        'AI': '/images/category-ai.svg',
+        'امنیت': '/images/category-security.svg',
+        'DevOps': '/images/category-devops.svg',
+        'برنامه‌نویسی': '/images/category-programming.svg',
+        'سخت‌افزار': '/images/category-hardware.svg'
+      }
+      return images[category] || '/images/news.svg'
+    },
     goToDetail(id) {
       this.$router.push(`/news/${id}`)
     }
@@ -204,12 +216,24 @@ export default {
   transition: all 0.3s;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .news-card:active {
   background: rgba(124, 58, 237, 0.15);
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(124, 58, 237, 0.2);
+}
+
+.news-image {
+  width: calc(100% + 40px);
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-top: -20px;
+  margin-bottom: 15px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 0;
 }
 
 .news-header {

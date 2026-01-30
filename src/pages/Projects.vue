@@ -22,6 +22,7 @@
         @click="goToDetail(project.id)"
         style="cursor: pointer;"
       >
+        <img :src="getImageForCategory(project.category)" :alt="project.title" class="project-image">
         <div class="project-header">
           <div class="icon">{{ project.icon }}</div>
           <div class="status" :class="project.status">{{ project.status }}</div>
@@ -182,6 +183,15 @@ export default {
     }
   },
   methods: {
+    getImageForCategory(category) {
+      const images = {
+        'وب': '/images/projects.svg',
+        'موبایل': '/images/projects.svg',
+        'ابزار': '/images/projects.svg',
+        'دیگر': '/images/projects.svg'
+      }
+      return images[category] || '/images/category-projects.svg'
+    },
     goToDetail(id) {
       this.$router.push(`/projects/${id}`)
     }
@@ -253,12 +263,24 @@ export default {
   transition: all 0.3s;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .project-card:active {
   background: rgba(124, 58, 237, 0.15);
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(124, 58, 237, 0.2);
+}
+
+.project-image {
+  width: calc(100% + 40px);
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-top: -20px;
+  margin-bottom: 15px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 0;
 }
 
 .project-header {

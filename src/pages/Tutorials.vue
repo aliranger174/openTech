@@ -22,6 +22,7 @@
         @click="goToDetail(tutorial.id)"
         style="cursor: pointer;"
       >
+        <img :src="getImageForCategory(tutorial.category)" :alt="tutorial.title" class="tutorial-image">
         <div class="level" :class="tutorial.level.toLowerCase()">
           {{ tutorial.level }}
         </div>
@@ -129,6 +130,15 @@ export default {
     }
   },
   methods: {
+    getImageForCategory(category) {
+      const images = {
+        'لینوکس': '/images/category-linux.svg',
+        'امنیت': '/images/category-security.svg',
+        'برنامه‌نویسی': '/images/category-programming.svg',
+        'DevOps': '/images/category-devops.svg'
+      }
+      return images[category] || '/images/category-tutorials.svg'
+    },
     goToDetail(id) {
       this.$router.push(`/tutorials/${id}`)
     }
@@ -201,11 +211,23 @@ export default {
   display: flex;
   flex-direction: column;
   position: relative;
+  overflow: hidden;
 }
 
 .tutorial-card:active {
   background: rgba(124, 58, 237, 0.15);
   transform: translateY(-3px);
+}
+
+.tutorial-image {
+  width: calc(100% + 40px);
+  margin-left: -20px;
+  margin-right: -20px;
+  margin-top: -20px;
+  margin-bottom: 15px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 0;
 }
 
 .level {

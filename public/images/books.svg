@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ef4444;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#grad3)"/>
+  <g opacity="0.2">
+    <rect x="30" y="40" width="60" height="80" fill="white" rx="3"/>
+    <rect x="100" y="35" width="60" height="90" fill="white" rx="3"/>
+    <rect x="170" y="42" width="60" height="85" fill="white" rx="3"/>
+    <rect x="240" y="38" width="60" height="88" fill="white" rx="3"/>
+    <rect x="310" y="45" width="60" height="80" fill="white" rx="3"/>
+  </g>
+  <rect x="80" y="120" width="240" height="120" fill="#1a1a2e" rx="10"/>
+  <text x="100" y="150" font-size="24" fill="#f59e0b" font-family="Arial" font-weight="bold">📖</text>
+  <text x="140" y="160" font-size="20" fill="white" font-family="Arial" font-weight="bold">کتاب‌های فنی</text>
+  <rect x="100" y="180" width="200" height="2" fill="#ef4444"/>
+  <text x="100" y="210" font-size="14" fill="#ccc" font-family="Arial">مراجع و منابع معتبر</text>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#10b981;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#grad2)"/>
+  <g opacity="0.3">
+    <circle cx="50" cy="50" r="25" fill="white"/>
+    <circle cx="350" cy="250" r="35" fill="white"/>
+  </g>
+  <rect x="60" y="60" width="280" height="180" fill="#1a1a2e" rx="10"/>
+  <rect x="80" y="80" width="240" height="20" fill="#10b981" rx="5"/>
+  <rect x="80" y="110" width="240" height="15" fill="#06b6d4" rx="3"/>
+  <rect x="80" y="135" width="240" height="10" fill="#888" opacity="0.6" rx="2"/>
+  <rect x="80" y="155" width="200" height="10" fill="#888" opacity="0.6" rx="2"/>
+  <text x="80" y="205" font-size="18" fill="white" font-family="Arial" font-weight="bold">📚 دروس و آموزش‌ها</text>
+</svg>

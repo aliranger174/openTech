@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="book-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d97706;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#book-grad)"/>
+  <g opacity="0.2">
+    <rect x="80" y="50" width="70" height="120" fill="white" rx="3"/>
+    <rect x="160" y="40" width="70" height="130" fill="white" rx="3"/>
+    <rect x="240" y="55" width="70" height="115" fill="white" rx="3"/>
+  </g>
+  <rect x="100" y="190" width="200" height="80" fill="#1a1a2e" rx="8"/>
+  <text x="200" y="225" font-size="20" text-anchor="middle" fill="#f59e0b" font-family="Arial" font-weight="bold">📚 مراجع فنی</text>
+  <text x="200" y="255" font-size="12" text-anchor="middle" fill="#ccc" font-family="Arial">Technical Books</text>
+</svg>

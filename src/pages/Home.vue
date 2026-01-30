@@ -11,35 +11,35 @@
 
     <section class="categories">
       <div class="category-card">
-        <div class="icon">📰</div>
+        <img src="/images/news.svg" alt="اخبار" class="card-image">
         <h3>اخبار</h3>
         <p>آخرین اخبار فناوری</p>
         <router-link to="/news" class="link">→</router-link>
       </div>
 
       <div class="category-card">
-        <div class="icon">🎓</div>
+        <img src="/images/tutorials.svg" alt="آموزش" class="card-image">
         <h3>آموزش</h3>
         <p>دوره‌های تخصصی</p>
         <router-link to="/tutorials" class="link">→</router-link>
       </div>
 
       <div class="category-card">
-        <div class="icon">📚</div>
+        <img src="/images/books.svg" alt="کتاب‌ها" class="card-image">
         <h3>کتاب‌ها</h3>
         <p>منابع فنی معروف</p>
         <router-link to="/books" class="link">→</router-link>
       </div>
 
       <div class="category-card">
-        <div class="icon">🔒</div>
+        <img src="/images/news.svg" alt="امنیت" class="card-image">
         <h3>امنیت</h3>
         <p>مقالات امنیتی</p>
         <router-link to="/news" class="link">→</router-link>
       </div>
 
       <div class="category-card">
-        <div class="icon">💼</div>
+        <img src="/images/projects.svg" alt="پروژه‌ها" class="card-image">
         <h3>پروژه‌ها</h3>
         <p>نمونه‌های کاری</p>
         <router-link to="/projects" class="link">→</router-link>
@@ -159,12 +159,23 @@ export default {
   transition: all 0.3s;
   border: 1px solid rgba(124, 58, 237, 0.3);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .category-card:active {
   background: rgba(124, 58, 237, 0.2);
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(124, 58, 237, 0.2);
+}
+
+.category-card .card-image {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 12px;
 }
 
 .category-card .icon {
