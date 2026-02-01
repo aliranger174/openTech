@@ -272,7 +272,7 @@ export default {
 }
 
 .btn {
-  padding: 8px 12px;
+  padding: 10px 14px;
   background: linear-gradient(135deg, #7c3aed 0%, #06b6d4 100%);
   color: white;
   border: none;
@@ -281,6 +281,10 @@ export default {
   cursor: pointer;
   transition: all 0.3s;
   font-size: 12px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn:active {
@@ -291,17 +295,24 @@ export default {
 @media (max-width: 768px) {
   .books-page h2 {
     font-size: 24px;
+    margin-bottom: 20px;
   }
   
   .books-grid {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
     gap: 12px;
   }
 }
 
 @media (max-width: 480px) {
+  .books-page h2 {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+  
   .books-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
   }
   
   .book-card {
@@ -310,10 +321,38 @@ export default {
   
   .book-cover {
     height: 100px;
+    margin-bottom: 10px;
   }
   
   .cover-icon {
-    font-size: 36px;
+    font-size: 32px;
+  }
+  
+  .book-card h3 {
+    font-size: 13px;
+    margin-bottom: 4px;
+  }
+  
+  .author {
+    font-size: 10px;
+    margin-bottom: 6px;
+  }
+  
+  .description {
+    font-size: 11px;
+    margin-bottom: 8px;
+  }
+  
+  .info {
+    gap: 10px;
+    margin-bottom: 6px;
+    font-size: 10px;
+  }
+  
+  .btn {
+    padding: 8px 10px;
+    font-size: 11px;
+    min-height: 36px;
   }
 }
 </style>

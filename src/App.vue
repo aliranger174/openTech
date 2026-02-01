@@ -106,10 +106,11 @@ export default {
 .header-content {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 12px;
 }
 
 .logo h1 {
@@ -133,6 +134,9 @@ export default {
   gap: 6px;
   transition: all 0.3s;
   backdrop-filter: blur(10px);
+  min-height: 44px;
+  min-width: 44px;
+  flex-shrink: 0;
 }
 
 .menu-toggle:active {
@@ -160,12 +164,15 @@ export default {
   font-weight: 500;
   transition: all 0.3s;
   font-size: 14px;
-  padding: 8px 16px;
+  padding: 12px 16px;
   position: relative;
   border-radius: 6px;
   background: rgba(124, 58, 237, 0.1);
   border: 1px solid rgba(124, 58, 237, 0.3);
   backdrop-filter: blur(10px);
+  min-height: 44px;
+  display: flex;
+  align-items: center;
 }
 
 .nav-link:hover {
@@ -183,7 +190,7 @@ export default {
 
 .main {
   flex: 1;
-  padding: 30px 16px;
+  padding: 24px 12px;
 }
 
 .footer {
@@ -218,8 +225,8 @@ export default {
     -webkit-backdrop-filter: blur(30px) saturate(180%);
     border: 1px solid rgba(124, 58, 237, 0.3);
     border-top: none;
-    padding: 16px;
-    gap: 12px;
+    padding: 12px;
+    gap: 8px;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s;
@@ -227,11 +234,11 @@ export default {
   }
   
   .nav.active {
-    max-height: 400px;
+    max-height: 500px;
   }
   
   .nav-link {
-    padding: 12px 16px;
+    padding: 12px 14px;
     font-size: 14px;
     background: rgba(124, 58, 237, 0.1);
     border: 1px solid rgba(124, 58, 237, 0.3);
@@ -249,21 +256,27 @@ export default {
   }
   
   .main {
-    padding: 20px 12px;
+    padding: 18px 10px;
   }
   
   .footer {
-    padding: 16px 12px;
+    padding: 14px 10px;
+    font-size: 12px;
   }
 }
 
 @media (max-width: 480px) {
   .logo h1 {
     font-size: 16px;
+    padding: 10px 0;
   }
   
   .main {
-    padding: 16px 10px;
+    padding: 14px 8px;
+  }
+  
+  .header-content {
+    padding: 0 12px;
   }
 }
 </style>

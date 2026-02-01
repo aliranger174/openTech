@@ -226,7 +226,7 @@ export default {
 }
 
 .tab {
-  padding: 8px 16px;
+  padding: 10px 16px;
   border: 2px solid rgba(124, 58, 237, 0.4);
   background: transparent;
   color: #e2e8f0;
@@ -235,6 +235,9 @@ export default {
   transition: all 0.3s;
   font-size: 13px;
   font-weight: 500;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
 }
 
 .tab:active {
@@ -367,21 +370,87 @@ export default {
 @media (max-width: 768px) {
   .projects-page h2 {
     font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .filter-tabs {
+    justify-content: flex-start;
+    overflow-x: auto;
+    gap: 8px;
+    margin-bottom: 24px;
+    padding-bottom: 8px;
+  }
+  
+  .tab {
+    padding: 8px 12px;
+    font-size: 12px;
+    flex-shrink: 0;
   }
   
   .projects-grid {
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 12px;
   }
 }
 
 @media (max-width: 480px) {
+  .projects-page h2 {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+  
+  .filter-tabs {
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+  
+  .tab {
+    padding: 8px 12px;
+    font-size: 12px;
+    min-height: 36px;
+  }
+  
   .projects-grid {
     grid-template-columns: 1fr;
+    gap: 10px;
   }
   
   .project-card {
-    padding: 16px;
+    padding: 12px;
+  }
+  
+  .project-image {
+    height: 120px;
+    margin-bottom: 10px;
+  }
+  
+  .icon {
+    font-size: 28px;
+  }
+  
+  .status {
+    font-size: 10px;
+    padding: 3px 8px;
+  }
+  
+  .project-card h3 {
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+  
+  .description {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+  
+  .tech-tag {
+    padding: 3px 8px;
+    font-size: 10px;
+  }
+  
+  .footer {
+    font-size: 11px;
+    gap: 8px;
   }
 }
 </style>

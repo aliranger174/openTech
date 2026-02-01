@@ -173,7 +173,7 @@ export default {
 }
 
 .tab {
-  padding: 8px 16px;
+  padding: 10px 16px;
   border: 2px solid rgba(124, 58, 237, 0.4);
   background: transparent;
   color: #e2e8f0;
@@ -182,6 +182,9 @@ export default {
   transition: all 0.3s;
   font-size: 13px;
   font-weight: 500;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
 }
 
 .tab:active {
@@ -280,7 +283,7 @@ export default {
 }
 
 .start-btn {
-  padding: 10px 16px;
+  padding: 10px 14px;
   background: linear-gradient(135deg, #7c3aed 0%, #06b6d4 100%);
   color: white;
   border: none;
@@ -289,6 +292,10 @@ export default {
   cursor: pointer;
   transition: all 0.3s;
   font-size: 12px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .start-btn:active {
@@ -299,26 +306,86 @@ export default {
 @media (max-width: 768px) {
   .tutorials-page h2 {
     font-size: 24px;
+    margin-bottom: 20px;
   }
   
   .filter-tabs {
     justify-content: flex-start;
     overflow-x: auto;
     gap: 8px;
+    padding-bottom: 8px;
+    scroll-padding: 12px;
+  }
+  
+  .tab {
+    padding: 8px 12px;
+    font-size: 12px;
+    flex-shrink: 0;
   }
   
   .tutorials-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
   }
 }
 
 @media (max-width: 480px) {
+  .tutorials-page h2 {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+  
+  .filter-tabs {
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+  
+  .tab {
+    padding: 8px 12px;
+    font-size: 12px;
+    min-height: 36px;
+  }
+  
   .tutorials-grid {
     grid-template-columns: 1fr;
+    gap: 10px;
   }
   
   .tutorial-card {
-    padding: 16px;
+    padding: 12px;
+  }
+  
+  .tutorial-image {
+    height: 100px;
+    margin-bottom: 10px;
+  }
+  
+  .level {
+    font-size: 10px;
+    padding: 3px 8px;
+  }
+  
+  .tutorial-card h3 {
+    font-size: 14px;
+    margin-top: 12px;
+    margin-bottom: 6px;
+  }
+  
+  .tutorial-card p {
+    font-size: 11px;
+    margin-bottom: 8px;
+  }
+  
+  .meta {
+    gap: 12px;
+    margin-bottom: 8px;
+    font-size: 10px;
+  }
+  
+  .start-btn {
+    padding: 8px 12px;
+    font-size: 11px;
+    min-height: 36px;
   }
 }
 </style>

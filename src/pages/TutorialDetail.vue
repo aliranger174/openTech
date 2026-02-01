@@ -146,6 +146,10 @@ export default {
   font-size: 16px;
   margin-bottom: 24px;
   transition: color 0.3s;
+  padding: 8px 12px;
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
 }
 
 .back-btn:hover {
@@ -272,12 +276,15 @@ export default {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   border: none;
   color: white;
-  padding: 12px 32px;
+  padding: 12px 28px;
   border-radius: 6px;
   cursor: pointer;
   font-weight: 600;
   font-size: 16px;
   transition: all 0.3s;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
 }
 
 .btn-start:hover {
@@ -293,16 +300,153 @@ export default {
 }
 
 @media (max-width: 768px) {
+  .tutorial-detail {
+    padding: 0 12px;
+  }
+
   .tutorial-container {
-    padding: 24px;
+    padding: 20px;
+  }
+
+  .featured-image {
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-top: -20px;
+    height: 200px;
+    margin-bottom: 20px;
   }
 
   .header h1 {
-    font-size: 24px;
+    font-size: 22px;
+    margin-bottom: 14px;
+  }
+
+  .meta {
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
   }
 
   .info-grid {
     grid-template-columns: 1fr;
+    gap: 14px;
+    margin: 24px 0;
+  }
+
+  .info-card {
+    padding: 16px;
+  }
+
+  .value {
+    font-size: 18px;
+  }
+
+  .description {
+    margin: 24px 0;
+    padding: 18px 0;
+  }
+
+  .description h3 {
+    font-size: 16px;
+  }
+
+  .description p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tutorial-detail {
+    padding: 0 8px;
+  }
+
+  .back-btn {
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+
+  .tutorial-container {
+    padding: 16px;
+  }
+
+  .featured-image {
+    width: calc(100% + 32px);
+    margin-left: -16px;
+    margin-right: -16px;
+    margin-top: -16px;
+    height: 160px;
+    margin-bottom: 16px;
+  }
+
+  .header h1 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    line-height: 1.3;
+  }
+
+  .meta {
+    gap: 10px;
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+  }
+
+  .level {
+    padding: 4px 10px;
+    font-size: 11px;
+  }
+
+  .category {
+    padding: 4px 10px;
+    font-size: 11px;
+  }
+
+  .info-grid {
+    gap: 12px;
+    margin: 18px 0;
+  }
+
+  .info-card {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .icon {
+    font-size: 24px;
+  }
+
+  .label {
+    font-size: 11px;
+  }
+
+  .value {
+    font-size: 16px;
+  }
+
+  .description {
+    margin: 16px 0;
+    padding: 14px 0;
+  }
+
+  .description h3 {
+    font-size: 14px;
+  }
+
+  .description p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .btn-start {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+
+  .not-found {
+    padding: 20px;
+    font-size: 14px;
   }
 }
 </style>

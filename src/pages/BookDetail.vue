@@ -148,6 +148,10 @@ export default {
   font-size: 16px;
   margin-bottom: 24px;
   transition: color 0.3s;
+  padding: 8px 12px;
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
 }
 
 .back-btn:hover {
@@ -233,11 +237,14 @@ export default {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   border: none;
   color: white;
-  padding: 12px 28px;
+  padding: 12px 24px;
   border-radius: 6px;
   cursor: pointer;
   font-weight: 600;
   transition: all 0.3s;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
 }
 
 .btn-download:hover {
@@ -253,17 +260,130 @@ export default {
 }
 
 @media (max-width: 768px) {
+  .book-detail {
+    padding: 0 12px;
+  }
+
   .book-container {
     grid-template-columns: 1fr;
-    padding: 24px;
+    padding: 20px;
+    gap: 24px;
   }
 
   .book-cover-large {
     font-size: 80px;
+    max-width: 200px;
+    margin: 0 auto;
   }
 
   .book-info h1 {
     font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .author {
+    font-size: 14px;
+  }
+
+  .rating {
+    font-size: 18px;
+    margin-bottom: 18px;
+  }
+
+  .details {
+    margin: 18px 0;
+    padding: 18px 0;
+  }
+
+  .detail-item {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+
+  .description {
+    margin: 18px 0;
+  }
+
+  .description h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .description p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .book-detail {
+    padding: 0 8px;
+  }
+
+  .back-btn {
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+
+  .book-container {
+    padding: 16px;
+    gap: 20px;
+  }
+
+  .book-cover-large {
+    font-size: 60px;
+    max-width: 150px;
+  }
+
+  .book-info h1 {
+    font-size: 18px;
+    line-height: 1.3;
+    margin-bottom: 8px;
+  }
+
+  .author {
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+
+  .rating {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .details {
+    margin: 16px 0;
+    padding: 16px 0;
+  }
+
+  .detail-item {
+    flex-direction: column;
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  .description {
+    margin: 16px 0;
+  }
+
+  .description h3 {
+    font-size: 14px;
+  }
+
+  .description p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .btn-download {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+
+  .not-found {
+    padding: 20px;
+    font-size: 14px;
   }
 }
 </style>

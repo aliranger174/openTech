@@ -187,6 +187,7 @@ export default {
   color: #e2e8f0;
   border: 1px solid rgba(124, 58, 237, 0.4);
   transition: all 0.3s;
+  min-height: 44px;
 }
 
 .search-bar input::placeholder {
@@ -303,21 +304,104 @@ export default {
 @media (max-width: 768px) {
   .news-page h2 {
     font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .search-bar {
+    margin-bottom: 24px;
+  }
+  
+  .search-bar input {
+    max-width: 100%;
   }
   
   .news-grid {
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    grid-template-columns: 1fr;
     gap: 12px;
+  }
+  
+  .news-card {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 12px;
+    padding: 12px;
+  }
+  
+  .news-image {
+    width: 100px;
+    height: 100px;
+    margin: 0;
+    grid-row: 1 / 4;
+  }
+  
+  .news-card h3 {
+    font-size: 14px;
+    margin: 0;
+  }
+  
+  .news-card p {
+    font-size: 12px;
+    margin: 0;
   }
 }
 
 @media (max-width: 480px) {
+  .news-page h2 {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+  
+  .search-bar {
+    margin-bottom: 18px;
+  }
+  
+  .search-bar input {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+  
   .news-grid {
     grid-template-columns: 1fr;
+    gap: 10px;
   }
   
   .news-card {
-    padding: 16px;
+    padding: 12px;
+  }
+  
+  .news-image {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .news-header {
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  
+  .category {
+    font-size: 10px;
+    padding: 3px 8px;
+  }
+  
+  .date {
+    font-size: 10px;
+  }
+  
+  .news-card h3 {
+    font-size: 13px;
+    margin-bottom: 6px;
+  }
+  
+  .news-card p {
+    font-size: 11px;
+    margin-bottom: 8px;
+  }
+  
+  .footer {
+    font-size: 10px;
+    gap: 8px;
   }
 }
 </style>

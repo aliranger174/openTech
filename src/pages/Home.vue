@@ -10,40 +10,40 @@
     </section>
 
     <section class="categories">
-      <div class="category-card">
+      <router-link to="/news" class="category-card">
         <img src="/images/news.svg" alt="اخبار" class="card-image">
         <h3>اخبار</h3>
         <p>آخرین اخبار فناوری</p>
-        <router-link to="/news" class="link">→</router-link>
-      </div>
+        <span class="link">→</span>
+      </router-link>
 
-      <div class="category-card">
+      <router-link to="/tutorials" class="category-card">
         <img src="/images/tutorials.svg" alt="آموزش" class="card-image">
         <h3>آموزش</h3>
         <p>دوره‌های تخصصی</p>
-        <router-link to="/tutorials" class="link">→</router-link>
-      </div>
+        <span class="link">→</span>
+      </router-link>
 
-      <div class="category-card">
+      <router-link to="/books" class="category-card">
         <img src="/images/books.svg" alt="کتاب‌ها" class="card-image">
         <h3>کتاب‌ها</h3>
         <p>منابع فنی معروف</p>
-        <router-link to="/books" class="link">→</router-link>
-      </div>
+        <span class="link">→</span>
+      </router-link>
 
-      <div class="category-card">
+      <router-link to="/news" class="category-card">
         <img src="/images/news.svg" alt="امنیت" class="card-image">
         <h3>امنیت</h3>
         <p>مقالات امنیتی</p>
-        <router-link to="/news" class="link">→</router-link>
-      </div>
+        <span class="link">→</span>
+      </router-link>
 
-      <div class="category-card">
+      <router-link to="/projects" class="category-card">
         <img src="/images/projects.svg" alt="پروژه‌ها" class="card-image">
         <h3>پروژه‌ها</h3>
         <p>نمونه‌های کاری</p>
-        <router-link to="/projects" class="link">→</router-link>
-      </div>
+        <span class="link">→</span>
+      </router-link>
     </section>
 
     <section class="featured">
@@ -114,13 +114,16 @@ export default {
 }
 
 .btn {
-  padding: 12px 28px;
+  padding: 12px 24px;
   border-radius: 6px;
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s;
   display: inline-block;
   font-size: 14px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
 }
 
 .btn-primary {
@@ -162,6 +165,9 @@ export default {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 .category-card:active {
@@ -201,6 +207,7 @@ export default {
   display: inline-block;
   opacity: 0.8;
   transition: all 0.3s;
+  pointer-events: none;
 }
 
 .link:active {
@@ -289,6 +296,10 @@ export default {
     font-size: 15px;
   }
   
+  .hero-buttons {
+    gap: 12px;
+  }
+  
   .categories {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
@@ -297,26 +308,33 @@ export default {
   .featured {
     padding: 24px 16px;
   }
+  
+  .featured-items {
+    gap: 12px;
+  }
 }
 
 @media (max-width: 480px) {
   .hero h2 {
-    font-size: 24px;
+    font-size: 22px;
     margin-bottom: 10px;
   }
   
   .hero p {
     font-size: 13px;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
   
   .hero-buttons {
     gap: 10px;
+    flex-direction: column;
   }
   
   .btn {
-    padding: 10px 20px;
+    padding: 12px 18px;
     font-size: 13px;
+    width: 100%;
+    justify-content: center;
   }
   
   .categories {
@@ -326,15 +344,48 @@ export default {
   }
   
   .category-card {
-    padding: 16px;
+    padding: 14px;
   }
   
-  .category-card .icon {
-    font-size: 28px;
+  .category-card .card-image {
+    height: 100px;
+    margin-bottom: 8px;
+  }
+  
+  .category-card h3 {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+  
+  .category-card p {
+    font-size: 11px;
+  }
+  
+  .featured {
+    padding: 18px 12px;
+  }
+  
+  .featured h3 {
+    font-size: 20px;
+    margin-bottom: 16px;
   }
   
   .featured-items {
     grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  
+  .featured-item {
+    padding: 14px;
+  }
+  
+  .featured-item h4 {
+    font-size: 13px;
+    margin-bottom: 6px;
+  }
+  
+  .featured-item p {
+    font-size: 11px;
   }
 }
 </style>

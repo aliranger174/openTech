@@ -147,6 +147,10 @@ export default {
   font-size: 16px;
   margin-bottom: 24px;
   transition: color 0.3s;
+  padding: 8px 12px;
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
 }
 
 .back-btn:hover {
@@ -272,23 +276,28 @@ export default {
 
 .tech-tag {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  padding: 8px 16px;
+  padding: 8px 14px;
   border-radius: 6px;
   font-size: 13px;
   font-weight: 600;
   color: white;
+  display: inline-flex;
+  align-items: center;
 }
 
 .btn-view {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   border: none;
   color: white;
-  padding: 12px 32px;
+  padding: 12px 28px;
   border-radius: 6px;
   cursor: pointer;
   font-weight: 600;
   font-size: 16px;
   transition: all 0.3s;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
 }
 
 .btn-view:hover {
@@ -304,22 +313,186 @@ export default {
 }
 
 @media (max-width: 768px) {
+  .project-detail {
+    padding: 0 12px;
+  }
+
   .project-container {
-    padding: 24px;
+    padding: 20px;
+  }
+
+  .featured-image {
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-top: -20px;
+    height: 200px;
+    margin-bottom: 20px;
   }
 
   .header-top {
     flex-direction: column;
     align-items: flex-start;
-    gap: 16px;
+    gap: 14px;
+    margin-bottom: 24px;
+  }
+
+  .project-icon {
+    font-size: 48px;
+    min-width: auto;
   }
 
   .title-section h1 {
-    font-size: 24px;
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .description-section {
+    margin-bottom: 24px;
+    padding-bottom: 18px;
+  }
+
+  .description-section h3 {
+    font-size: 16px;
+  }
+
+  .description-section p {
+    font-size: 14px;
   }
 
   .info-grid {
     grid-template-columns: 1fr;
+    gap: 14px;
+    margin: 24px 0;
+  }
+
+  .info-card {
+    padding: 14px;
+  }
+
+  .technologies-section {
+    margin: 24px 0;
+    padding: 18px 0;
+  }
+
+  .technologies-section h3 {
+    margin-bottom: 12px;
+    font-size: 16px;
+  }
+
+  .tech-list {
+    gap: 10px;
+  }
+
+  .tech-tag {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-detail {
+    padding: 0 8px;
+  }
+
+  .back-btn {
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+
+  .project-container {
+    padding: 16px;
+  }
+
+  .featured-image {
+    width: calc(100% + 32px);
+    margin-left: -16px;
+    margin-right: -16px;
+    margin-top: -16px;
+    height: 160px;
+    margin-bottom: 16px;
+  }
+
+  .header-top {
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+
+  .project-icon {
+    font-size: 40px;
+  }
+
+  .title-section h1 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    line-height: 1.3;
+  }
+
+  .status {
+    font-size: 11px;
+    padding: 4px 10px;
+  }
+
+  .description-section {
+    margin-bottom: 18px;
+    padding-bottom: 14px;
+  }
+
+  .description-section h3 {
+    font-size: 14px;
+  }
+
+  .description-section p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .info-grid {
+    gap: 12px;
+    margin: 16px 0;
+  }
+
+  .info-card {
+    padding: 12px;
+  }
+
+  .label {
+    font-size: 11px;
+  }
+
+  .value {
+    font-size: 14px;
+  }
+
+  .technologies-section {
+    margin: 16px 0;
+    padding: 14px 0;
+  }
+
+  .technologies-section h3 {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+
+  .tech-list {
+    gap: 8px;
+  }
+
+  .tech-tag {
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+
+  .btn-view {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+
+  .not-found {
+    padding: 20px;
+    font-size: 14px;
   }
 }
 </style>
