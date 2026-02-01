@@ -126,7 +126,7 @@ export default {
 .menu-toggle {
   display: none;
   flex-direction: column;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(124, 58, 237, 0.4);
   border: 1px solid rgba(124, 58, 237, 0.4);
   border-radius: 6px;
   cursor: pointer;
