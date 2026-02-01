@@ -229,12 +229,14 @@ export default {
     gap: 8px;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s;
+    transition: max-height 0.3s, visibility 0.3s;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    visibility: hidden;
   }
   
   .nav.active {
     max-height: 500px;
+    visibility: visible;
   }
   
   .nav-link {
